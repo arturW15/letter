@@ -1,0 +1,102 @@
+  .envelope-container{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    animation: dudu 3s ease 5.8s 1 alternate forwards;
+    transform-origin: 0 0;
+    z-index: 1;
+}
+  .envelope {
+    width: 448px;
+    height: 448px;
+    overflow: hidden;
+    position: relative;
+    transition: all ease;
+    animation: tremble 1s infinite;
+    margin: auto;
+  }
+  .envelope--base {
+    top: 200px;
+    z-index: 2;
+    width: 440px;
+    height: 242px;
+    position: relative;
+    border-radius: 6px;
+    border: 3px solid #00000024;
+    background-color: rgb(254, 168, 182);
+  }
+  .envelope__tab {
+    left: 56px;
+    z-index: 1;
+    bottom: 52px;
+    width: 424px;
+    height: 280px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    border-top-left-radius: 60px;
+    background-color: pink;
+    border: 3px solid #00000024;
+  }
+  .envelope__letter {
+    left: 58px;
+    z-index: 3;
+    width: 308px;
+    bottom: 34px;
+    height: 200px;
+    cursor: pointer;
+    font-size: 26px;
+    font-style: oblique;
+    padding: 24px 36px;
+    border-radius: 16px;
+    position: absolute;
+    box-sizing: border-box;
+    background-size: cover;
+    color: #a59090;
+    border: 2px solid #00000024;
+    transition: all 0.6s linear 0.4s;
+    background-image: url("https://i.pinimg.com/564x/bd/27/23/bd2723cccfec31aeb82b41034fdd2933.jpg");
+  }
+  .envelope:hover .envelope__letter {
+    height: 400px;
+    color: #4c4444;
+  }
+
+  .envelope__letter:before {
+    content: "";
+    height: 0;
+    width: 12px;
+    right: -68px;
+    bottom: -34px;
+    position: absolute;
+    border-top: 102px solid transparent;
+    border-left: 214px solid pink;
+    border-right: 217px solid pink;
+    border-bottom: 130px solid rgb(255, 174, 187);
+  }
+  @keyframes tremble {
+    0% {
+      transform: rotate(-1deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(1deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes dudu {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} 
+  
